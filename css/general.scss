@@ -1,9 +1,15 @@
 $color-gold: hsl(40, 54%, 54%);
 $color-champagne: rgb(240, 204, 147);
-$color-primary: #b08ffc;
-$color-secondary: #7d45fc;
+$color-brown: #995500;
+$color-lavender: #b08ffc;
+$color-violet: #7d45fc;
 $color-bright: #eee;
-$color-dark-transparent: rgba(34, 34, 34, 0.85);
+$color-dark-transparent: rgba(34, 34, 34, 0.5);
+
+/* == debug == */
+// * {
+//   outline: dotted 2px green;
+// }
 
 // == By Tag ==
 a:hover,
@@ -16,25 +22,26 @@ body {
   background-color: $color-bright;
 }
 
-/* == div debug == */
-// div {
-//   outline: dotted 2px green;
-// }
+button:hover {
+  opacity: 0.8;
+}
 
 h1 {
-  color: $color-champagne;
+  color: $color-brown;
   text-shadow: 2px 2px $color-gold;
-  font-size: 2 vw;
+  font-size: 3.2em;
+  font-family: "Tangerine", sans-serif;
 }
 
 h2 {
-  color: $color-bright;
-  font-family: "Lobster", sans-serif;
+  color: $color-dark-transparent;
+  font-size: 1.5vw;
+  word-spacing: 0.1em;
 }
 
 h3 {
   color: black;
-  font-family: "Lobster", sans-serif;
+  font-family: "Tangerine", sans-serif;
 }
 
 h4,
@@ -55,7 +62,7 @@ header {
 
 // == By Class ==
 .btn-go {
-  background-color: $color-primary;
+  background-color: $color-lavender;
   color: black;
   font-family: Arial Black;
   margin: 15px 0 0 0;
@@ -86,24 +93,6 @@ header {
   font-family: "Gotu", Helvetica, sans-serif;
 }
 
-.jumbotron {
-  width: 100%;
-  margin: 0;
-  padding: 20px;
-  background-image: linear-gradient(
-    to right,
-    $color-secondary,
-    $color-primary,
-    $color-primary,
-    $color-primary,
-    $color-bright,
-    $color-bright
-  );
-  color: black;
-  font-size: 1vw;
-  font-family: "Bitter", sans-serif;
-}
-
 .banner {
   padding: 10px 0;
   min-height: 10px;
@@ -130,11 +119,11 @@ header {
 }
 
 .text-orange {
-  color: $color-primary;
+  color: $color-lavender;
 }
 
 .text-secondary {
-  color: $color-secondary;
+  color: $color-violet;
 }
 
 .text-sm {
@@ -145,11 +134,43 @@ header {
   font-family: "Lobster", sans-serif;
 }
 
-.navbar {
-  background-image: linear-gradient(to right, $color-secondary, $color-primary);
+// == By ID ==
+#login {
+  justify-content: right;
 }
 
-// == By ID ==
+#jumbotron {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  background-image: linear-gradient(
+    to right,
+    $color-gold,
+    $color-champagne,
+    $color-bright,
+    $color-champagne,
+    $color-champagne,
+    $color-bright,
+    $color-bright
+  );
+  color: black;
+  font-size: 1vw;
+  font-family: "Bitter", sans-serif;
+}
+
+#navbar {
+  background-image: linear-gradient(
+    to right,
+    $color-gold,
+    $color-champagne,
+    $color-bright,
+    $color-champagne,
+    $color-champagne,
+    $color-bright,
+    $color-bright
+  );
+}
+
 #padThaiCards {
   display: none;
 }
@@ -187,9 +208,6 @@ header {
   }
 
   // == By Class ==
-  .crop {
-    overflow: hidden;
-  }
   .fit {
     width: 90vw;
     max-width: 99%;

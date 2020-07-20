@@ -12,36 +12,46 @@
   <!-- Additional CSS must be placed after Bootstrap CSS. The order matters! -->
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/general.css" />
+  <link rel="stylesheet" href="/css/modal.css" />
+
   <!-- endbuild -->
-  <!-- <link
+  <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans"
-    />
+      href="https://fonts.googleapis.com/css?family=Tangerine|Open+Sans"
+  />
+  <!-- 
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans"
-    /> -->
+    /> 
+  -->
 
   <title>COVID-19 Restaurant Reopen Lists</title>
 </head>
 
 <body>
   <!-- Header -->
-  <header class="jumbotron jumbotron-fluid">
+  <header id="jumbotron" class="jumbotron-fluid">
     <div class="container">
       <div class="row">
         <div class="col" id="banner">
           <h1>COVID-19 Restaurant Reopen Lists</h1>
-          <h2 class="text-dark text-cursive">
-            Check your local restaurants.
+          <h2>
+            Check if your local restaurants allow dine-in while maintaining social distancing.
           </h2>
         </div>
       </div>
     </div>
   </header>
   <!-- Navbar -->
-  <div id="navbar" class="sticky-top"></div>
+  <div id="navbar">
+    <button id="login" class="btn"
+      onclick="document.getElementById('id01').style.display='block'" 
+    ><i class="fa fa-sign-in" aria-hidden="true"></i>
+      Login
+    </button> 
+  </div>
   <!-- Share Social Icons -->
   <div id="shareSocial" class="sticky-top"></div>
 
@@ -49,14 +59,18 @@
   <div class="container">
     <div class="row row-content">
       <div class="col-xs-10 col-md-6">
-        <img class="crop fit" src="https://phil.cdc.gov//PHIL_Images/2871/2871_lores.jpg" height="300px" />
+        <img class="crop fit" height="400px" style="object-fit: none;"
+            src="https://phil.cdc.gov//PHIL_Images/2871/2871_lores.jpg" 
+        />
         <br />
         <span>
           <a class="photo-credit" href="https://phil.cdc.gov/Details.aspx?pid=2871" target="_blank">CDC</a>
         </span>
       </div>
       <div class="col-xs-10 col-md-6">
-        <img src="https://image.freepik.com/free-photo/dinner-with-wine_1182-785.jpg" height="300px" />
+        <img class="crop fit" height="400px" style="object-fit: none;"
+            src="https://image.freepik.com/free-photo/dinner-with-wine_1182-785.jpg" 
+        />
         <br />
         <span>
           <a class="photo-credit" href="https://www.freepik.com/free-photos-vectors/food" target="_blank">Food photo
@@ -86,13 +100,46 @@
         </select>
       </span>
       <span>
-        <button class="btn btn-go" id="goCategory" onclick="menufunction()">
+        <button class="btn btn-go" id="goCategory">
           Go
         </button>
       </span>
     </div>
     <br />
   </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="id01" class="modal">
+  
+    <form class="modal-content animate" method="post" action="/index.html">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" 
+              class="close" 
+              title="Close Modal">&times;</span>
+      </div>
+  
+      <div class="container">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+  
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>        
+      </div>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <span class="left">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        </span>
+        <span class="right">
+          <button type="submit">Login</button>
+        </span>
+      </div>
+    </form>
   </div>
 </body>
 
@@ -103,7 +150,8 @@
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <!-- Our own codes -->
-
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/token.js"></script>
 <!-- endbuild -->
 
 </html>
