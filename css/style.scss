@@ -4,7 +4,6 @@ $color-primary: #b08ffc;
 $color-secondary: #7d45fc;
 $color-bright: #eee;
 $color-dark-transparent: rgba(34, 34, 34, 0.85);
-$color-black: #000;
 
 // == By Tag ==
 a:hover,
@@ -14,9 +13,13 @@ a:visited {
 }
 
 body {
-  background-image: url("/img/thai-cuisine-symbol_5Exf7UjA - crop.svg");
   background-color: $color-bright;
 }
+
+/* == div debug == */
+// div {
+//   outline: dotted 2px green;
+// }
 
 h1 {
   color: $color-champagne;
@@ -24,16 +27,20 @@ h1 {
   font-size: 2 vw;
 }
 
-h2,
+h2 {
+  color: $color-bright;
+  font-family: "Lobster", sans-serif;
+}
+
 h3 {
-  color: $color-black;
+  color: black;
   font-family: "Lobster", sans-serif;
 }
 
 h4,
 h5,
 h6 {
-  color: white;
+  color: black;
   font-family: "Arial", cursive;
 }
 
@@ -47,15 +54,11 @@ header {
 }
 
 // == By Class ==
-.btn-orange {
+.btn-go {
   background-color: $color-primary;
   color: black;
   font-family: Arial Black;
-}
-
-.btn-orange-sm {
-  background-color: $color-primary;
-  color: black;
+  margin: 15px 0 0 0;
 }
 
 .crop {
@@ -83,45 +86,22 @@ header {
   font-family: "Gotu", Helvetica, sans-serif;
 }
 
-// .image-with-margin {
-//     margin: 20px;
-//     position: relative;
-//     background: radial-gradient(transparent 50%, $color-dark 70%);
-// }
-
-// .image-blurred-edge {
-//     position: absolute;
-
-//     /* you need to match the shadow color to your background or image border for the desired effect*/
-//     box-shadow: 0 0 50x 50px $color-dark inset;
-//     // -webkit-filter: blur(10px);
-//     // -moz-filter: blur(3px);
-//     -o-filter: blur(3px);
-//     // -ms-filter: blur(10px);
-//     filter: blur(3px);
-// }
-
 .jumbotron {
   width: 100%;
   margin: 0;
   padding: 20px;
-  background-image: linear-gradient(to right, $color-secondary, $color-bright);
+  background-image: linear-gradient(
+    to right,
+    $color-secondary,
+    $color-primary,
+    $color-primary,
+    $color-primary,
+    $color-bright,
+    $color-bright
+  );
   color: black;
   font-size: 1vw;
   font-family: "Bitter", sans-serif;
-}
-
-.modal {
-  margin: mx-auto;
-}
-
-.modal-header {
-  background-color: $color-secondary;
-}
-
-.modal-title {
-  font-family: "Bitter", sans-serif;
-  color: $color-black;
 }
 
 .banner {
@@ -137,6 +117,7 @@ header {
     text-decoration: none;
     color: inherit;
   }
+  text-align: center;
 }
 
 .row-content {
@@ -145,7 +126,7 @@ header {
 }
 
 .text-black {
-  color: $color-black;
+  color: black;
 }
 
 .text-orange {

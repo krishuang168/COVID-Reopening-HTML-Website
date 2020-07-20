@@ -5,26 +5,30 @@ a:visited {
 }
 
 body {
-  background-image: url("/img/thai-cuisine-symbol_5Exf7UjA - crop.svg");
   background-color: #eee;
 }
 
+/* == div debug == */
 h1 {
   color: #f0cc93;
   text-shadow: 2px 2px #c99f4a;
   font-size: 2 vw;
 }
 
-h2,
+h2 {
+  color: #eee;
+  font-family: "Lobster", sans-serif;
+}
+
 h3 {
-  color: #000;
+  color: black;
   font-family: "Lobster", sans-serif;
 }
 
 h4,
 h5,
 h6 {
-  color: white;
+  color: black;
   font-family: "Arial", cursive;
 }
 
@@ -35,15 +39,11 @@ header a:visited {
   color: inherit;
 }
 
-.btn-orange {
+.btn-go {
   background-color: #b08ffc;
   color: black;
   font-family: Arial Black;
-}
-
-.btn-orange-sm {
-  background-color: #b08ffc;
-  color: black;
+  margin: 15px 0 0 0;
 }
 
 .crop {
@@ -75,23 +75,10 @@ header a:visited {
   width: 100%;
   margin: 0;
   padding: 20px;
-  background-image: linear-gradient(to right, #7d45fc, #eee);
+  background-image: linear-gradient(to right, #7d45fc, #b08ffc, #b08ffc, #b08ffc, #eee, #eee);
   color: black;
   font-size: 1vw;
   font-family: "Bitter", sans-serif;
-}
-
-.modal {
-  margin: mx-auto;
-}
-
-.modal-header {
-  background-color: #7d45fc;
-}
-
-.modal-title {
-  font-family: "Bitter", sans-serif;
-  color: #000;
 }
 
 .banner {
@@ -103,6 +90,7 @@ header a:visited {
   color: #888;
   font-size: 7px;
   font-style: italic;
+  text-align: center;
 }
 .photo-credit a:link {
   text-decoration: none;
@@ -115,7 +103,7 @@ header a:visited {
 }
 
 .text-black {
-  color: #000;
+  color: black;
 }
 
 .text-orange {
