@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- build:css css/main.css -->
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- Additional CSS must be placed after Bootstrap CSS. The order matters! -->
+    <link
+      rel="stylesheet"
+      href="node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-social/bootstrap-social.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- endbuild -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans"
+    /> -->
+
+    <title>COVID-19 Restaurant Reopen Info</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col" id="banner">
+            <h1>COVID-19 Restaurant Reopen Info</h1>
+            <h4 class="text-dark text-cursive">
+              Check your local restaurants.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Navbar -->
+    <div id="navbar" class="sticky-top"></div>
+    <!-- Share Social Icons -->
+    <div id="shareSocial" class="sticky-top"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row row-content">
+        <div class="col-sm-4 col-md-6 ml-3">
+          <img class="crop"
+            src="https://phil.cdc.gov//PHIL_Images/23311/23311_lores.jpg"
+            height="300px"
+          />
+          <img src="https://image.freepik.com/free-photo/dinner-with-wine_1182-785.jpg" height="300px"/>
+          <p class="photo-credit">Photo credit: (left) CDC (right) <a href="https://www.freepik.com/free-photos-vectors/food">Food photo created by kotkoa - www.freepik.com</a></p>
+        </div>
+
+        <div class="col ml-3">
+          <h2>Select a city in the Great Seattle Area...</h2>
+          <br />
+
+          <!-- Menu type -->
+          <select
+            class="form-control form-control-lg"
+            style="width: 200px;"
+            name="menuType"
+            id="menuType"
+          >
+            <option selected>Select...</option>
+            <option value="1">Seattle</option>
+            <option value="2">Bellevue</option>
+            <option value="3">Redmond</option>
+            <option value="4">Kirkland</option>
+            <option value="5">Woodinville</option>
+            <option value="6">Bothell</option>
+            <option value="7">Lynwood</option>
+            <option value="8">Edmonds</option>
+            <option value="9">Shoreline</option>
+          </select>
+          <button class="btn btn-orange" id="goCategory" onclick="menufunction()">
+            Go
+          </button>
+        </div>
+        <br />
+      </div>
+    </div>
+  </body>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- build:js js/main.js -->
+  <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <!-- Our own codes -->
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+  <!-- endbuild -->
+</html>

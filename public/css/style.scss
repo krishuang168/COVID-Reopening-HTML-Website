@@ -1,0 +1,224 @@
+$color-gold: hsl(40, 54%, 54%);
+$color-champagne: rgb(240, 204, 147);
+$color-primary: #b08ffc;
+$color-secondary: #7d45fc;
+$color-bright: #eee;
+$color-dark-transparent: rgba(34, 34, 34, 0.85);
+$color-black: #000;
+
+// == By Tag ==
+a:hover,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+body {
+  background-image: url("/img/thai-cuisine-symbol_5Exf7UjA - crop.svg");
+  background-color: $color-bright;
+}
+
+h1 {
+  color: $color-champagne;
+  text-shadow: 2px 2px $color-gold;
+  font-size: 2 vw;
+}
+
+h2,
+h3 {
+  color: $color-black;
+  font-family: "Lobster", sans-serif;
+}
+
+h4,
+h5,
+h6 {
+  color: white;
+  font-family: "Arial", cursive;
+}
+
+header {
+  a:hover,
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+// == By Class ==
+.btn-orange {
+  background-color: $color-primary;
+  color: black;
+  font-family: Arial Black;
+}
+
+.btn-orange-sm {
+  background-color: $color-primary;
+  color: black;
+}
+
+.crop {
+  overflow: hidden;
+}
+
+.card-title {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 110%;
+  color: #000;
+}
+
+.row-card {
+  display: none;
+}
+
+.fit {
+  width: 50vw;
+  max-width: 99%;
+  max-height: 99%;
+}
+
+.font-arial {
+  font-family: "Gotu", Helvetica, sans-serif;
+}
+
+// .image-with-margin {
+//     margin: 20px;
+//     position: relative;
+//     background: radial-gradient(transparent 50%, $color-dark 70%);
+// }
+
+// .image-blurred-edge {
+//     position: absolute;
+
+//     /* you need to match the shadow color to your background or image border for the desired effect*/
+//     box-shadow: 0 0 50x 50px $color-dark inset;
+//     // -webkit-filter: blur(10px);
+//     // -moz-filter: blur(3px);
+//     -o-filter: blur(3px);
+//     // -ms-filter: blur(10px);
+//     filter: blur(3px);
+// }
+
+.jumbotron {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  background-image: linear-gradient(to right, $color-secondary, $color-bright);
+  color: black;
+  font-size: 1vw;
+  font-family: "Bitter", sans-serif;
+}
+
+.modal {
+  margin: mx-auto;
+}
+
+.modal-header {
+  background-color: $color-secondary;
+}
+
+.modal-title {
+  font-family: "Bitter", sans-serif;
+  color: $color-black;
+}
+
+.banner {
+  padding: 10px 0;
+  min-height: 10px;
+}
+
+.photo-credit {
+  color: #888;
+  font-size: 7px;
+  font-style: italic;
+  a:link {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.row-content {
+  padding: 50px 0;
+  min-height: 80px;
+}
+
+.text-black {
+  color: $color-black;
+}
+
+.text-orange {
+  color: $color-primary;
+}
+
+.text-secondary {
+  color: $color-secondary;
+}
+
+.text-sm {
+  font-size: 20px;
+}
+
+.text-cursive {
+  font-family: "Lobster", sans-serif;
+}
+
+.navbar {
+  background-image: linear-gradient(to right, $color-secondary, $color-primary);
+}
+
+// == By ID ==
+#padThaiCards {
+  display: none;
+}
+
+// == Viewport Size SM ==
+@media only screen and (max-width: 768px) {
+  // == By Tag ==
+  h2 {
+    font-size: 25px;
+  }
+  img {
+    resize: 50%;
+  }
+
+  // == By Class ==
+  .fit {
+    width: 50vw;
+    max-width: 99%;
+    max-height: 99%;
+  }
+  .jumbotron {
+    max-width: 100%;
+    font-size: 25px;
+  }
+  .text-sm {
+    font-size: 20px;
+  }
+}
+
+// == Viewport Size XS ==
+@media only screen and (max-width: 575px) {
+  // == By Tag ==
+  h2 {
+    font-size: 25px;
+  }
+
+  // == By Class ==
+  .crop {
+    overflow: hidden;
+  }
+  .fit {
+    width: 90vw;
+    max-width: 99%;
+    max-height: 99%;
+  }
+  .jumbotron {
+    max-width: 100%;
+    font-size: 25px;
+  }
+  .text-sm {
+    font-size: 12px;
+  }
+}
