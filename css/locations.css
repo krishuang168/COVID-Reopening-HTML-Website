@@ -1,0 +1,14 @@
+/* Full-width input fields */
+input[type="radio"] {
+  width: 5%;
+  display: inline-block;
+}
+
+label {
+  margin-right: 5px;
+  display: inline-block;
+}
+
+form {
+  min-height: 100px;
+}

@@ -7,27 +7,15 @@
 
     <!-- build:css css/main.css -->
     <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <!-- Additional CSS must be placed after Bootstrap CSS. The order matters! -->
-    <link
-      rel="stylesheet"
-      href="node_modules/font-awesome/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap-social/bootstrap-social.css"
-    />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="/css/general.css" />
-    <link rel="stylesheet" href="/css/modal.css" />
+    <link rel="stylesheet" href="/css/locations.css" />
 
     <!-- endbuild -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Tangerine|Open+Sans"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine|Open+Sans" />
     <!-- 
     <link
       rel="stylesheet"
@@ -45,8 +33,7 @@
           <div class="col" id="banner">
             <h1>COVID-19 Restaurant Reopen Lists</h1>
             <h2>
-              Check if your local restaurants allow dine-in while maintaining
-              social distancing.
+              Check if your local restaurants allow dine-in while maintaining social distancing.
             </h2>
           </div>
         </div>
@@ -75,33 +62,46 @@
 
     <!-- Main Content -->
     <div class="container bg-white mt-5">
-      <h3>Select a city in the Great Seattle Area...</h3>
+      <h3>Chooose a city in the Great Seattle Area...</h3>
       <br />
 
-      <span>
-        <select
-          class="form-control form-control-lg"
-          style="width: 200px;"
-          name="menuType"
-          id="menuType"
-        >
-          <option selected>Select...</option>
-          <option value="1">Seattle</option>
-          <option value="2">Bellevue</option>
-          <option value="3">Redmond</option>
-          <option value="4">Kirkland</option>
-          <option value="5">Woodinville</option>
-          <option value="6">Bothell</option>
-          <option value="7">Lynwood</option>
-          <option value="8">Edmonds</option>
-          <option value="9">Shoreline</option>
-        </select>
-      </span>
-      <span>
+      <div>
+        <form class="form-control form-control-lg">
+          <div class="container">
+            <input type="radio" id="Seattle" name="GSA" value="Seattle" />
+            <label for="Seattle">Seattle</label>
+            <input type="radio" id="Bellevue" name="GSA" value="Bellevue" />
+            <label for="Bellevue">Bellevue</label>
+            <input type="radio" id="Redmond" name="GSA" value="Redmond" />
+            <label for="Redmond">Redmond</label>
+
+            <input type="radio" id="Kirkland" name="GSA" value="Kirkland" />
+            <label for="Kirkland">Kirkland</label>
+            <input type="radio" id="Woodinville" name="GSA" value="Woodinville" />
+            <label for="Woodinville">Woodinville</label>
+            <!-- Separation -->
+            <input type="radio" id="Bothell" name="GSA" value="Bothell" />
+            <label for="Bothell">Bothell</label>
+            <input type="radio" id="Lynwood" name="GSA" value="Lynwood" />
+            <label for="Lynwood">Lynwood</label>
+            <input type="radio" id="Edmonds" name="GSA" value="Edmonds" />
+            <label for="Edmonds">Edmonds</label>
+            <input type="radio" id="Shoreline" name="GSA" value="Shoreline" />
+            <label for="Shoreline">Shoreline</label>
+            <input type="radio" id="SeaTac" name="GSA" value="SeaTac" />
+            <label for="SeaTac">SeaTac</label>
+            <input type="radio" id="Kent" name="GSA" value="Kent" />
+            <label for="Kent">Kent</label>
+            <input type="radio" id="Renton" name="GSA" value="Renton" />
+            <label for="Renton">Renton</label>
+          </div>
+        </form>
+      </div>
+      <!-- <span>
         <button class="btn btn-violet btn-go" id="goCategory">
           Go
         </button>
-      </span>
+      </span> -->
     </div>
   </body>
 </html>
