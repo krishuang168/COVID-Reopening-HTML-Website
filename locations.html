@@ -28,16 +28,18 @@
   <body>
     <!-- Header -->
     <header id="jumbotron" class="jumbotron-fluid">
-      <div class="container">
-        <div class="row">
-          <div class="col" id="banner">
-            <h1>COVID-19 Restaurant Reopen Lists</h1>
-            <h2>
-              Check if your local restaurants allow dine-in while maintaining social distancing.
-            </h2>
+      <a href="/">
+        <div class="container">
+          <div class="row">
+            <div class="col" id="banner">
+              <h1>COVID-19 Restaurant Reopen Lists</h1>
+              <h2>
+                Check if your local restaurants allow dine-in while maintaining social distancing.
+              </h2>
+            </div>
           </div>
         </div>
-      </div>
+      </a>
     </header>
 
     <!-- Navbar -->
@@ -66,33 +68,87 @@
       <br />
 
       <div>
-        <form class="form-control form-control-lg">
+        <form id="cityForm" class="form-control form-control-lg" method="POST">
           <div class="container">
-            <input type="radio" id="Seattle" name="GSA" value="Seattle" />
+            <input
+              type="radio"
+              id="Seattle"
+              name="city"
+              value="Seattle"
+              onclick="submitToServer()"
+            />
             <label for="Seattle">Seattle</label>
-            <input type="radio" id="Bellevue" name="GSA" value="Bellevue" />
+            <input
+              type="radio"
+              id="Bellevue"
+              name="city"
+              value="Bellevue"
+              onclick="submitToServer()"
+            />
             <label for="Bellevue">Bellevue</label>
-            <input type="radio" id="Redmond" name="GSA" value="Redmond" />
+            <input
+              type="radio"
+              id="Redmond"
+              name="city"
+              value="Redmond"
+              onclick="submitToServer()"
+            />
             <label for="Redmond">Redmond</label>
 
-            <input type="radio" id="Kirkland" name="GSA" value="Kirkland" />
+            <input
+              type="radio"
+              id="Kirkland"
+              name="city"
+              value="Kirkland"
+              onclick="submitToServer()"
+            />
             <label for="Kirkland">Kirkland</label>
-            <input type="radio" id="Woodinville" name="GSA" value="Woodinville" />
+            <input
+              type="radio"
+              id="Woodinville"
+              name="city"
+              value="Woodinville"
+              onclick="submitToServer()"
+            />
             <label for="Woodinville">Woodinville</label>
             <!-- Separation -->
-            <input type="radio" id="Bothell" name="GSA" value="Bothell" />
+            <input
+              type="radio"
+              id="Bothell"
+              name="city"
+              value="Bothell"
+              onclick="submitToServer()"
+            />
             <label for="Bothell">Bothell</label>
-            <input type="radio" id="Lynwood" name="GSA" value="Lynwood" />
+            <input
+              type="radio"
+              id="Lynwood"
+              name="city"
+              value="Lynwood"
+              onclick="submitToServer()"
+            />
             <label for="Lynwood">Lynwood</label>
-            <input type="radio" id="Edmonds" name="GSA" value="Edmonds" />
+            <input
+              type="radio"
+              id="Edmonds"
+              name="city"
+              value="Edmonds"
+              onclick="submitToServer()"
+            />
             <label for="Edmonds">Edmonds</label>
-            <input type="radio" id="Shoreline" name="GSA" value="Shoreline" />
+            <input
+              type="radio"
+              id="Shoreline"
+              name="city"
+              value="Shoreline"
+              onclick="submitToServer()"
+            />
             <label for="Shoreline">Shoreline</label>
-            <input type="radio" id="SeaTac" name="GSA" value="SeaTac" />
+            <input type="radio" id="SeaTac" name="city" value="SeaTac" onclick="submitToServer()" />
             <label for="SeaTac">SeaTac</label>
-            <input type="radio" id="Kent" name="GSA" value="Kent" />
+            <input type="radio" id="Kent" name="city" value="Kent" onclick="submitToServer()" />
             <label for="Kent">Kent</label>
-            <input type="radio" id="Renton" name="GSA" value="Renton" />
+            <input type="radio" id="Renton" name="city" value="Renton" onclick="submitToServer()" />
             <label for="Renton">Renton</label>
           </div>
         </form>
@@ -103,5 +159,12 @@
         </button>
       </span> -->
     </div>
+    <div id="server_response"></div>
   </body>
+  <script>
+    function submitToServer() {
+      document.getElementById("cityForm").submit();
+      document.getElementById("server_response").innerHTML(JSON.parse({ msg: "I Don't know..." }));
+    }
+  </script>
 </html>
