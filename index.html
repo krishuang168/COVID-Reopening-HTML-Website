@@ -1,141 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <!-- Required meta tags always come first -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- build:css css/main.css -->
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- Additional CSS must be placed after Bootstrap CSS. The order matters! -->
+    <link
+      rel="stylesheet"
+      href="node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-social/bootstrap-social.css"
+    />
+    <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/css/modal.css" />
 
-  <!-- build:css css/main.css -->
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-  <!-- Additional CSS must be placed after Bootstrap CSS. The order matters! -->
-  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-  <link rel="stylesheet" href="/css/general.css" />
-  <link rel="stylesheet" href="/css/modal.css" />
-
-  <!-- endbuild -->
-  <link
+    <!-- endbuild -->
+    <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Tangerine|Open+Sans"
-  />
-  <!-- 
+    />
+    <!-- 
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans"
     /> 
   -->
 
-  <title>COVID-19 Restaurant Reopen Lists</title>
-</head>
+    <title>COVID-19 Restaurant Reopen Lists</title>
+  </head>
 
-<body>
-  <!-- Header -->
-  <header id="jumbotron" class="jumbotron-fluid">
-    <div class="container">
-      <div class="row">
-        <div class="col" id="banner">
-          <h1>COVID-19 Restaurant Reopen Lists</h1>
-          <h2>
-            Check if your local restaurants allow dine-in while maintaining social distancing.
-          </h2>
+  <body>
+    <!-- Header -->
+    <header id="jumbotron" class="jumbotron-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col" id="banner">
+            <h1>COVID-19 Restaurant Reopen Lists</h1>
+            <h2>
+              Check if your local restaurants allow dine-in while maintaining
+              social distancing.
+            </h2>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-  <!-- Navbar -->
-  <div id="navbar">
-    <button id="login" class="btn ml-auto"
-      onclick="document.getElementById('loginModal').style.display='block'" 
-    ><i class="fa fa-sign-in" aria-hidden="true"></i>
-      Log In
-    </button> 
-    <button id="signup" class="btn"
-    onclick="document.getElementById('loginModal').style.display='block'" 
-  ><i class="fa fa-user-plus" aria-hidden="true"></i>
-    Sign Up
-  </button> 
-  </div>
-  <!-- Share Social Icons -->
-  <div id="shareSocial" class="sticky-top"></div>
+    </header>
 
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row row-content">
-      <div class="col-xs-10 col-md-6">
-        <img class="crop fit" height="400px" style="object-fit: none;"
-            src="https://phil.cdc.gov//PHIL_Images/2871/2871_lores.jpg" 
-        />
-        <br />
-        <span>
-          <a class="photo-credit" href="https://phil.cdc.gov/Details.aspx?pid=2871" target="_blank">CDC</a>
-        </span>
-      </div>
-      <div class="col-xs-10 col-md-6">
-        <img class="crop fit" height="400px" style="object-fit: none;"
-            src="https://image.freepik.com/free-photo/dinner-with-wine_1182-785.jpg" 
-        />
-        <br />
-        <span>
-          <a class="photo-credit" href="https://www.freepik.com/free-photos-vectors/food" target="_blank">Food photo
-            created by kotkoa - www.freepik.com</a>
-        </span>
-      </div>
+    <!-- Navbar -->
+    <div id="navbar">
+      <button
+        id="login"
+        class="btn ml-auto"
+        onclick="document.getElementById('loginModal').style.display='block'"
+      >
+        <i class="fa fa-sign-in" aria-hidden="true"></i>
+        Log In
+      </button>
+      <button
+        id="signup"
+        class="btn"
+        onclick="document.getElementById('loginModal').style.display='block'"
+      >
+        <i class="fa fa-user-plus" aria-hidden="true"></i>
+        Sign Up
+      </button>
     </div>
 
-    <h3>Start</h3>
-    <button href="http://localhost:3000/locations">By Location</button>
-      &ThickSpace; &ThickSpace; &ThickSpace;
-    <button href="http://localhost:3000//categories">By Category</button>
-    
-    <br />
-  </div>
-  </div>
+    <!-- Share Social Icons -->
+    <div id="shareSocial" class="sticky-top"></div>
 
-  <!-- Login Modal -->
-  <div id="loginModal" class="modal">
-  
-    <form class="modal-content animate" method="POST">
-      <div class="imgcontainer">
-        <span onclick="document.getElementById('loginModal').style.display='none'" 
-              class="close" 
-              title="Close Modal">&times;</span>
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row row-content">
+        <div class="col-xs-10 col-md-6">
+          <img
+            class="crop fit"
+            height="400px"
+            style="object-fit: none;"
+            src="https://phil.cdc.gov//PHIL_Images/2871/2871_lores.jpg"
+          />
+          <br />
+          <span>
+            <a
+              class="photo-credit"
+              href="https://phil.cdc.gov/Details.aspx?pid=2871"
+              target="_blank"
+              >CDC</a
+            >
+          </span>
+        </div>
+        <div class="col-xs-10 col-md-6">
+          <img
+            class="crop fit"
+            height="400px"
+            style="object-fit: none;"
+            src="https://image.freepik.com/free-photo/dinner-with-wine_1182-785.jpg"
+          />
+          <br />
+          <span>
+            <a
+              class="photo-credit"
+              href="https://www.freepik.com/free-photos-vectors/food"
+              target="_blank"
+              >Food photo created by kotkoa - www.freepik.com</a
+            >
+          </span>
+        </div>
       </div>
-  
+
       <div class="container">
-        <label for="username"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="username" required>
-  
-        <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
-
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>        
+        <h3>Start</h3>
+        <br />
+        <a class="button btn-lg btn-violet" href="locations">By Location</a>
+        &ThickSpace; &ThickSpace; &ThickSpace;
+        <a class="button btn-lg btn-lavender" href="categories">By Category</a>
       </div>
-  
-      <div class="container" style="background-color:#f1f1f1">
-        <span class="left">
-          <button type="button" onclick="document.getElementById('loginModal').style.display='none'" class="cancelbtn">Cancel</button>
-        </span>
-        <span class="right">
-          <button type="submit" formmethod="post" onclick="alert(value)">Login</button>
-        </span>
-      </div>
-    </form>
-  </div>
-</body>
+    </div>
 
-<!-- build:js js/main.js -->
-<!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<!-- Our own codes -->
-<script type="text/javascript" src="js/modal.js"></script>
-<script type="text/javascript" src="js/token.js"></script>
-<!-- endbuild -->
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+      <form class="modal-content animate" method="POST">
+        <div class="imgcontainer">
+          <span
+            onclick="document.getElementById('loginModal').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;</span
+          >
+        </div>
 
+        <div class="container">
+          <label for="username"><b>Username</b></label>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            name="username"
+            required
+          />
+
+          <label for="password"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="password"
+            required
+          />
+
+          <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember
+            me
+          </label>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1;">
+          <span class="left">
+            <button
+              type="button"
+              onclick="document.getElementById('loginModal').style.display='none'"
+              class="cancelbtn"
+            >
+              Cancel
+            </button>
+          </span>
+          <span class="right">
+            <button type="submit" formmethod="post" onclick="alert(value)">
+              Login
+            </button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </body>
+
+  <!-- build:js js/main.js -->
+  <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <!-- Our own codes -->
+  <script type="text/javascript" src="js/modal.js"></script>
+  <script type="text/javascript" src="js/token.js"></script>
+  <!-- endbuild -->
 </html>

@@ -18,6 +18,14 @@ a:visited {
   text-decoration: none;
 }
 
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
+}
+
 body {
   background-color: $color-bright;
 }
@@ -27,7 +35,7 @@ button {
   border: none;
   font-size: 18px;
   font-weight: bolder;
-  text-shadow: adjust-hue($color: $color-violet, $degrees: 30);
+  text-shadow: $color-violet;
 }
 
 button:hover {
@@ -69,11 +77,24 @@ header {
 }
 
 // == By Class ==
+.bg-white {
+  background-color: white;
+}
+
 .btn-go {
-  background-color: $color-lavender;
   color: black;
   font-family: Arial Black;
   margin: 15px 0 0 0;
+}
+
+.btn-lavender {
+  color: $color-dark-transparent;
+  background-color: $color-lavender;
+}
+
+.btn-violet {
+  color: $color-bright;
+  background-color: $color-violet;
 }
 
 .crop {
@@ -150,7 +171,7 @@ header {
 #jumbotron {
   width: 100%;
   margin: 0;
-  padding: 20px;
+  padding: 5px;
   background-image: linear-gradient(
     to right,
     $color-gold,
@@ -177,6 +198,7 @@ header {
     $color-bright,
     $color-bright
   );
+  text-align: end;
 }
 
 #padThaiCards {

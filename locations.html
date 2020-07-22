@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- build:css css/main.css -->
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- Additional CSS must be placed after Bootstrap CSS. The order matters! -->
+    <link
+      rel="stylesheet"
+      href="node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-social/bootstrap-social.css"
+    />
+    <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/css/modal.css" />
+
+    <!-- endbuild -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tangerine|Open+Sans"
+    />
+    <!-- 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans"
+    /> 
+  -->
+
+    <title>COVID-19 Restaurant Reopen Lists</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="jumbotron" class="jumbotron-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col" id="banner">
+            <h1>COVID-19 Restaurant Reopen Lists</h1>
+            <h2>
+              Check if your local restaurants allow dine-in while maintaining
+              social distancing.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navbar -->
+    <div id="navbar">
+      <button
+        id="login"
+        class="btn ml-auto"
+        onclick="document.getElementById('loginModal').style.display='block'"
+      >
+        <i class="fa fa-sign-in" aria-hidden="true"></i>
+        Log In
+      </button>
+      <button
+        id="signup"
+        class="btn"
+        onclick="document.getElementById('loginModal').style.display='block'"
+      >
+        <i class="fa fa-user-plus" aria-hidden="true"></i>
+        Sign Up
+      </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container bg-white mt-5">
+      <h3>Select a city in the Great Seattle Area...</h3>
+      <br />
+
+      <span>
+        <select
+          class="form-control form-control-lg"
+          style="width: 200px;"
+          name="menuType"
+          id="menuType"
+        >
+          <option selected>Select...</option>
+          <option value="1">Seattle</option>
+          <option value="2">Bellevue</option>
+          <option value="3">Redmond</option>
+          <option value="4">Kirkland</option>
+          <option value="5">Woodinville</option>
+          <option value="6">Bothell</option>
+          <option value="7">Lynwood</option>
+          <option value="8">Edmonds</option>
+          <option value="9">Shoreline</option>
+        </select>
+      </span>
+      <span>
+        <button class="btn btn-violet btn-go" id="goCategory">
+          Go
+        </button>
+      </span>
+    </div>
+  </body>
+</html>
