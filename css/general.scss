@@ -22,6 +22,14 @@ body {
   background-color: $color-bright;
 }
 
+button {
+  background-color: $color-lavender;
+  border: none;
+  font-size: 18px;
+  font-weight: bolder;
+  text-shadow: adjust-hue($color: $color-violet, $degrees: 30);
+}
+
 button:hover {
   opacity: 0.8;
 }
@@ -41,7 +49,7 @@ h2 {
 
 h3 {
   color: black;
-  font-family: "Tangerine", sans-serif;
+  font-family: "Aria", sans-serif;
 }
 
 h4,

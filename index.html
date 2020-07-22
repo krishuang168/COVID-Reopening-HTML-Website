@@ -46,11 +46,16 @@
   </header>
   <!-- Navbar -->
   <div id="navbar">
-    <button id="login" class="btn"
-      onclick="document.getElementById('id01').style.display='block'" 
+    <button id="login" class="btn ml-auto"
+      onclick="document.getElementById('loginModal').style.display='block'" 
     ><i class="fa fa-sign-in" aria-hidden="true"></i>
-      Login
+      Log In
     </button> 
+    <button id="signup" class="btn"
+    onclick="document.getElementById('loginModal').style.display='block'" 
+  ><i class="fa fa-user-plus" aria-hidden="true"></i>
+    Sign Up
+  </button> 
   </div>
   <!-- Share Social Icons -->
   <div id="shareSocial" class="sticky-top"></div>
@@ -79,42 +84,21 @@
       </div>
     </div>
 
-
-
-    <div class="col">
-      <h3>Select a city in the Great Seattle Area...</h3>
-      <br />
-
-      <span>
-        <select class="form-control form-control-lg" style="width: 200px;" name="menuType" id="menuType">
-          <option selected>Select...</option>
-          <option value="1">Seattle</option>
-          <option value="2">Bellevue</option>
-          <option value="3">Redmond</option>
-          <option value="4">Kirkland</option>
-          <option value="5">Woodinville</option>
-          <option value="6">Bothell</option>
-          <option value="7">Lynwood</option>
-          <option value="8">Edmonds</option>
-          <option value="9">Shoreline</option>
-        </select>
-      </span>
-      <span>
-        <button class="btn btn-go" id="goCategory">
-          Go
-        </button>
-      </span>
-    </div>
+    <h3>Start</h3>
+    <button href="http://localhost:3000/locations">By Location</button>
+      &ThickSpace; &ThickSpace; &ThickSpace;
+    <button href="http://localhost:3000//categories">By Category</button>
+    
     <br />
   </div>
   </div>
 
-  <!-- Modal -->
-  <div id="id01" class="modal">
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
   
-    <form class="modal-content animate" method="post" action="/index.html">
+    <form class="modal-content animate" method="POST">
       <div class="imgcontainer">
-        <span onclick="document.getElementById('id01').style.display='none'" 
+        <span onclick="document.getElementById('loginModal').style.display='none'" 
               class="close" 
               title="Close Modal">&times;</span>
       </div>
@@ -133,10 +117,10 @@
   
       <div class="container" style="background-color:#f1f1f1">
         <span class="left">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="button" onclick="document.getElementById('loginModal').style.display='none'" class="cancelbtn">Cancel</button>
         </span>
         <span class="right">
-          <button type="submit">Login</button>
+          <button type="submit" formmethod="post" onclick="alert(value)">Login</button>
         </span>
       </div>
     </form>

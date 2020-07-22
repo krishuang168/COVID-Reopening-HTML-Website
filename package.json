@@ -2,7 +2,7 @@
   "name": "covid-restaurant-reopen",
   "version": "1.0.0",
   "description": "This is a website for listing restaurants in COVID-19 reopen phase",
-  "main": "home.html",
+  "main": "index.html",
   "scripts": {
     "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
     "clean": "rimraf dist",
