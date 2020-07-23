@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/css/modal.css" />
     <link rel="stylesheet" href="/css/locations.css" />
 
     <!-- endbuild -->
@@ -31,7 +32,7 @@
       <a href="/">
         <div class="container">
           <div class="row">
-            <div class="col" id="banner">
+            <div class="col banner">
               <h1>COVID-19 Restaurant Reopen Lists</h1>
               <h2>
                 Check if your local restaurants allow dine-in while maintaining social distancing.
@@ -60,15 +61,15 @@
         <i class="fa fa-user-plus" aria-hidden="true"></i>
         Sign Up
       </button>
+      <span class="breadcrumb"> >> Locations >> Great Seattle Area</span>
     </div>
 
     <!-- Main Content -->
-    <div class="container bg-white mt-5">
-      <h3>Chooose a city in the Great Seattle Area...</h3>
-      <br />
+    <div id="city-choices" class="container">
+      <h3 id="choose-a-city">Chooose a city in the Great Seattle Area...</h3>
 
       <div>
-        <form id="cityForm" class="form-control form-control-lg" method="POST">
+        <form id="cityForm" method="POST">
           <div class="container">
             <input
               type="radio"

@@ -17,6 +17,18 @@ label {
   display: inline-block;
 }
 
-form {
-  min-height: 100px;
+#city-choices {
+  background-color: white;
+  min-width: 300px;
+  min-height: 200px;
+  padding: 30px 20px 20px 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  label {
+    font-size: 1.2vw;
+  }
+}
+
+#choose-a-city {
+  padding-left: 20px;
 }

@@ -1,4 +1,4 @@
-$color-gold: hsl(40, 54%, 54%);
+$color-gold: hsl(40, 54%, 60%);
 $color-champagne: rgb(240, 204, 147);
 $color-brown: #995500;
 $color-lavender: #b08ffc;
@@ -51,7 +51,7 @@ h1 {
 
 h2 {
   color: $color-dark-transparent;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   word-spacing: 0.1em;
 }
 
@@ -127,6 +127,12 @@ header {
   min-height: 10px;
 }
 
+.breadcrumb {
+  display: flexbox;
+  margin-inline-start: inherit;
+  justify-content: start;
+}
+
 .photo-credit {
   color: #888;
   font-size: 7px;
@@ -173,10 +179,14 @@ header {
   margin: 0;
   padding: 5px;
   background-image: linear-gradient(
-    to right,
+    178deg,
+    $color-gold,
     $color-gold,
     $color-champagne,
     $color-bright,
+    $color-champagne,
+    $color-champagne,
+    $color-champagne,
     $color-champagne,
     $color-champagne,
     $color-bright,
@@ -189,28 +199,21 @@ header {
 
 #navbar {
   background-image: linear-gradient(
-    to right,
-    $color-gold,
+    176deg,
+    $color-champagne,
     $color-champagne,
     $color-bright,
-    $color-champagne,
-    $color-champagne,
+    $color-bright,
+    $color-bright,
     $color-bright,
     $color-bright
   );
   text-align: end;
 }
 
-#padThaiCards {
-  display: none;
-}
-
 // == Viewport Size SM ==
 @media only screen and (max-width: 768px) {
   // == By Tag ==
-  h2 {
-    font-size: 25px;
-  }
   img {
     resize: 50%;
   }
@@ -230,9 +233,6 @@ header {
 // == Viewport Size XS ==
 @media only screen and (max-width: 575px) {
   // == By Tag ==
-  h2 {
-    font-size: 25px;
-  }
 
   // == By Class ==
   .fit {

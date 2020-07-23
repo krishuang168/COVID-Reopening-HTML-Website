@@ -30,14 +30,14 @@ button:hover {
 
 h1 {
   color: #995500;
-  text-shadow: 2px 2px #c99f4a;
+  text-shadow: 2px 2px #d0ab62;
   font-size: 3.2em;
   font-family: "Tangerine", sans-serif;
 }
 
 h2 {
   color: rgba(34, 34, 34, 0.5);
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   word-spacing: 0.1em;
 }
 
@@ -110,6 +110,12 @@ header a:visited {
   min-height: 10px;
 }
 
+.breadcrumb {
+  display: flexbox;
+  margin-inline-start: inherit;
+  justify-content: start;
+}
+
 .photo-credit {
   color: #888;
   font-size: 7px;
@@ -154,25 +160,31 @@ header a:visited {
   width: 100%;
   margin: 0;
   padding: 5px;
-  background-image: linear-gradient(to right, #c99f4a, #f0cc93, #eee, #f0cc93, #f0cc93, #eee, #eee);
+  background-image: linear-gradient(
+    178deg,
+    #d0ab62,
+    #d0ab62,
+    #f0cc93,
+    #eee,
+    #f0cc93,
+    #f0cc93,
+    #f0cc93,
+    #f0cc93,
+    #f0cc93,
+    #eee,
+    #eee
+  );
   color: black;
   font-size: 1vw;
   font-family: "Bitter", sans-serif;
 }
 
 #navbar {
-  background-image: linear-gradient(to right, #c99f4a, #f0cc93, #eee, #f0cc93, #f0cc93, #eee, #eee);
+  background-image: linear-gradient(176deg, #f0cc93, #f0cc93, #eee, #eee, #eee, #eee, #eee);
   text-align: end;
 }
 
-#padThaiCards {
-  display: none;
-}
-
 @media only screen and (max-width: 768px) {
-  h2 {
-    font-size: 25px;
-  }
   img {
     resize: 50%;
   }
@@ -187,9 +199,6 @@ header a:visited {
 }
 
 @media only screen and (max-width: 575px) {
-  h2 {
-    font-size: 25px;
-  }
   .fit {
     width: 90vw;
     max-width: 99%;
