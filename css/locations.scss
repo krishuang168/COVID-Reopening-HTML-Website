@@ -59,6 +59,21 @@ body {
     margin-left: 200px;
   }
 
+  #Top {
+    position: fixed;
+    display: flexbox;
+    left: 90vw;
+    bottom: 5vw;
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 50%;
+    color: #000;
+    font-size: 30px;
+    padding-left: 10px;
+    vertical-align: top;
+  }
+
   .bubbles {
     position: relative;
     top: 700px; /*Initial Positions*/
