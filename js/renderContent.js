@@ -12,18 +12,32 @@ async function chooseCity(city) {
 function renderData(data) {
   console.log("Raw data: ", data);
 
+  // Images
+  const googleLogo = `https://upload.wikimedia.org/wikipedia/commons/a/a9/Google_Maps_icon.svg`;
+  const blueCheckmark = `/images/blue_checkmark.png`;
+
   if (data.indexOf("city") > 0) {
     // Correct Restaurant Data
     const contentObj = JSON.parse(data);
 
     console.log("Content object: ", contentObj);
     const restaurantList = contentObj.restaurants.map((item) => {
-      let str = `<li style="list-style: none"><h4>${item.name}</h4><p>`;
-      str += `Category: ${item.category}<br/>`;
+      let str = `<li style="list-style: none"><div>`;
+      str += `<span style="font-weight: bold; font-size: 20px">${item.name} </span>`;
+      str += `${
+        item.verified
+          ? `<img src=${blueCheckmark} style="width: 20px; vertical-align: middle"/>`
+          : ``
+      }<br/>`;
+      str += `<a href=${item.maps} target="_blank"><em>${item.streetAddress}, ${item.city}, ${item.state}, ${item.zip}</em>
+      <span>
+      <img src=${googleLogo} style="width: 25px; vertical-align: top"/></a></span>`;
+      str += `<p>Category: ${item.category}<br/>`;
       str += `Dine-In: ${item.dineIn === true ? "Yes" : "No"}<br/>`;
       str += `Delivery: ${item.delivery === true ? "Yes" : "No"}<br/>`;
       str += `Takeout: ${item.toGo === true ? "Yes" : "No"}`;
-      str += `</p></li>`;
+      str += `</p></div>`;
+      str += `</li>`;
 
       return str;
     });
@@ -35,6 +49,7 @@ function renderData(data) {
     const x = document.getElementById("server_response");
     x.innerHTML = `<div style="margin-left: 200px; background-image: inherite">
                   <h3>${contentObj.city}</h3>
+                  <br><img src=${blueCheckmark} style="width: 20px; vertical-align: middle"/> Verified
                   <hr>
                   <span>${renderedList}</span>
                   </div>`;
