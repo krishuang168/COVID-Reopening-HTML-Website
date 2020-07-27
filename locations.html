@@ -65,107 +65,114 @@
     </div>
 
     <!-- Main Content -->
-    <div id="city-choices" class="container">
-      <h3 id="choose-a-city">Chooose a city in the Great Seattle Area...</h3>
+    <div id="main-content">
+      <!-- Form & Results -->
+      <div id="city-choices" class="container">
+        <h3 id="choose-a-city">Chooose a city in the Great Seattle Area...</h3>
 
-      <div>
-        <form id="cityForm" method="POST">
-          <div class="container">
-            <input
-              type="radio"
-              id="Seattle"
-              name="city"
-              value="Seattle"
-              onclick="submitToServer()"
-            />
-            <label for="Seattle">Seattle</label>
-            <input
-              type="radio"
-              id="Bellevue"
-              name="city"
-              value="Bellevue"
-              onclick="submitToServer()"
-            />
-            <label for="Bellevue">Bellevue</label>
-            <input
-              type="radio"
-              id="Redmond"
-              name="city"
-              value="Redmond"
-              onclick="submitToServer()"
-            />
-            <label for="Redmond">Redmond</label>
+        <div>
+          <form id="cityForm">
+            <div class="container">
+              <input
+                type="radio"
+                id="Seattle"
+                name="city"
+                value="Seattle"
+                onclick="chooseCity('Seattle')"
+              />
+              <label for="Seattle">Seattle</label>
+              <input
+                type="radio"
+                id="Bellevue"
+                name="city"
+                value="Bellevue"
+                onclick="chooseCity('Bellevue')"
+              />
+              <label for="Bellevue">Bellevue</label>
+              <input
+                type="radio"
+                id="Redmond"
+                name="city"
+                value="Redmond"
+                onclick="chooseCity('Redmond')"
+              />
+              <label for="Redmond">Redmond</label>
 
-            <input
-              type="radio"
-              id="Kirkland"
-              name="city"
-              value="Kirkland"
-              onclick="submitToServer()"
-            />
-            <label for="Kirkland">Kirkland</label>
-            <input
-              type="radio"
-              id="Woodinville"
-              name="city"
-              value="Woodinville"
-              onclick="submitToServer()"
-            />
-            <label for="Woodinville">Woodinville</label>
-            <!-- Separation -->
-            <input
-              type="radio"
-              id="Bothell"
-              name="city"
-              value="Bothell"
-              onclick="submitToServer()"
-            />
-            <label for="Bothell">Bothell</label>
-            <input
-              type="radio"
-              id="Lynwood"
-              name="city"
-              value="Lynwood"
-              onclick="submitToServer()"
-            />
-            <label for="Lynwood">Lynwood</label>
-            <input
-              type="radio"
-              id="Edmonds"
-              name="city"
-              value="Edmonds"
-              onclick="submitToServer()"
-            />
-            <label for="Edmonds">Edmonds</label>
-            <input
-              type="radio"
-              id="Shoreline"
-              name="city"
-              value="Shoreline"
-              onclick="submitToServer()"
-            />
-            <label for="Shoreline">Shoreline</label>
-            <input type="radio" id="SeaTac" name="city" value="SeaTac" onclick="submitToServer()" />
-            <label for="SeaTac">SeaTac</label>
-            <input type="radio" id="Kent" name="city" value="Kent" onclick="submitToServer()" />
-            <label for="Kent">Kent</label>
-            <input type="radio" id="Renton" name="city" value="Renton" onclick="submitToServer()" />
-            <label for="Renton">Renton</label>
-          </div>
-        </form>
+              <input
+                type="radio"
+                id="Kirkland"
+                name="city"
+                value="Kirkland"
+                onclick="chooseCity('Kirkland')"
+              />
+              <label for="Kirkland">Kirkland</label>
+              <input
+                type="radio"
+                id="Woodinville"
+                name="city"
+                value="Woodinville"
+                onclick="chooseCity('Woodinville')"
+              />
+              <label for="Woodinville">Woodinville</label>
+              <!-- Separation -->
+              <input
+                type="radio"
+                id="Bothell"
+                name="city"
+                value="Bothell"
+                onclick="chooseCity('Bothell')"
+              />
+              <label for="Bothell">Bothell</label>
+              <input
+                type="radio"
+                id="Lynwood"
+                name="city"
+                value="Lynwood"
+                onclick="chooseCity('Lynwood')"
+              />
+              <label for="Lynwood">Lynwood</label>
+              <input
+                type="radio"
+                id="Edmonds"
+                name="city"
+                value="Edmonds"
+                onclick="chooseCity('Edmonds')"
+              />
+              <label for="Edmonds">Edmonds</label>
+              <input
+                type="radio"
+                id="Shoreline"
+                name="city"
+                value="Shoreline"
+                onclick="chooseCity('Shoreline')"
+              />
+              <label for="Shoreline">Shoreline</label>
+              <input
+                type="radio"
+                id="SeaTac"
+                name="city"
+                value="SeaTac"
+                onclick="chooseCity('SeaTac')"
+              />
+              <label for="SeaTac">SeaTac</label>
+              <input type="radio" id="Kent" name="city" value="Kent" onclick="chooseCity('Kent')" />
+              <label for="Kent">Kent</label>
+              <input
+                type="radio"
+                id="Renton"
+                name="city"
+                value="Renton"
+                onclick="chooseCity('Renton')"
+              />
+              <label for="Renton">Renton</label>
+            </div>
+          </form>
+        </div>
       </div>
-      <!-- <span>
-        <button class="btn btn-violet btn-go" id="goCategory">
-          Go
-        </button>
-      </span> -->
+      <div id="server_response"></div>
     </div>
-    <div id="server_response"></div>
+    <!-- End: Main-Content -->
   </body>
-  <script>
-    function submitToServer() {
-      document.getElementById("cityForm").submit();
-      document.getElementById("server_response").innerHTML(JSON.parse({ msg: "I Don't know..." }));
-    }
-  </script>
+  <script src="js/serverComm.js"></script>
+  <script src="js/baseUrl.js"></script>
 </html>
