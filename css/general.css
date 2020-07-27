@@ -112,7 +112,10 @@ header a:visited {
 }
 
 .breadcrumb {
-  background-image: inherit;
+  color: #000;
+  background-color: #eee;
+  opacity: 0.4;
+  display: inline-flexbox;
   position: relative;
   justify-content: start;
   justify-content: start;
@@ -154,31 +157,30 @@ header a:visited {
   font-family: "Lobster", sans-serif;
 }
 
-#login {
-  justify-content: right;
-}
-
 #jumbotron {
   width: 100%;
   margin: 0;
   padding: 5px;
   background-image: linear-gradient(
-    135deg,
+    105deg,
     #d0ab62,
-    #d0ab62,
-    #f0cc93,
-    #eee,
-    #f0cc93,
-    #f0cc93,
-    #f0cc93,
     #f0cc93,
     #eee,
     #eee,
-    #d0ab62
+    #f0cc93,
+    #f0cc93,
+    #f0cc93,
+    #f0cc93,
+    #eee,
+    #eee
   );
   color: black;
   font-size: 1vw;
   font-family: "Bitter", sans-serif;
+}
+
+#login {
+  justify-content: right;
 }
 
 #navbar {

@@ -19,7 +19,7 @@ label {
   display: inline-block;
 }
 
-#main-content {
+body {
   background-image: linear-gradient(
     90deg,
     $color-brown,
@@ -33,8 +33,12 @@ label {
     $color-woody-brown
   );
   z-index: 1;
-  min-height: 100vh;
+  height: 100vh;
   padding: 10px;
+}
+
+#main-content {
+  min-height: 70vh;
 
   #city-choices {
     background-color: white;

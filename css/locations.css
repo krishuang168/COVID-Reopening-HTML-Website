@@ -9,7 +9,7 @@ label {
   display: inline-block;
 }
 
-#main-content {
+body {
   background-image: linear-gradient(
     90deg,
     #995500,
@@ -23,8 +23,12 @@ label {
     #642
   );
   z-index: 1;
-  min-height: 100vh;
+  height: 100vh;
   padding: 10px;
+}
+
+#main-content {
+  min-height: 70vh;
 }
 #main-content #city-choices {
   background-color: white;
