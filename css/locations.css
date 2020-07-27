@@ -1,11 +1,10 @@
 /* Full-width input fields */
 input[type="radio"] {
-  width: 5%;
+  width: 3%;
   display: inline-block;
 }
 
 label {
-  margin-right: 5px;
   display: inline-block;
 }
 
