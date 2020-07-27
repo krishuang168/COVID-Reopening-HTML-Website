@@ -50,7 +50,7 @@ function renderData(data) {
     x.innerHTML = `<div style="margin-left: 200px; background-image: inherite">
                   <h3>${contentObj.city}</h3>
                   <br><img src=${blueCheckmark} style="width: 20px; vertical-align: middle"/> Verified
-                  <hr>
+                  <span style="display:inline; margin-bottom: 20px; justify-content: start"><p></p></span>
                   <span>${renderedList}</span>
                   </div>`;
     x.style.marginLeft = "10vw";
