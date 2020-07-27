@@ -1,4 +1,4 @@
-$color-gold: hsl(40, 54%, 60%);
+$color-gold: #d0ab62;
 $color-champagne: rgb(240, 204, 147);
 $color-brown: #995500;
 $color-lavender: #b08ffc;
@@ -28,6 +28,7 @@ a.button {
 
 body {
   background-color: $color-bright;
+  z-index: -1;
 }
 
 button {
@@ -128,8 +129,10 @@ header {
 }
 
 .breadcrumb {
-  display: flexbox;
-  margin-inline-start: inherit;
+  background-image: inherit;
+  // display: inline-flex;
+  position: relative;
+  justify-content: start;
   justify-content: start;
 }
 
@@ -179,7 +182,7 @@ header {
   margin: 0;
   padding: 5px;
   background-image: linear-gradient(
-    178deg,
+    135deg,
     $color-gold,
     $color-gold,
     $color-champagne,
@@ -188,9 +191,9 @@ header {
     $color-champagne,
     $color-champagne,
     $color-champagne,
-    $color-champagne,
     $color-bright,
-    $color-bright
+    $color-bright,
+    $color-gold
   );
   color: black;
   font-size: 1vw;
@@ -198,16 +201,7 @@ header {
 }
 
 #navbar {
-  background-image: linear-gradient(
-    176deg,
-    $color-champagne,
-    $color-champagne,
-    $color-bright,
-    $color-bright,
-    $color-bright,
-    $color-bright,
-    $color-bright
-  );
+  background-image: initial;
   text-align: end;
 }
 

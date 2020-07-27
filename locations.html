@@ -41,34 +41,33 @@
           </div>
         </div>
       </a>
+      <!-- Navbar -->
+      <div id="navbar">
+        <button
+          id="login"
+          class="btn ml-auto"
+          onclick="document.getElementById('loginModal').style.display='block'"
+        >
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+          Log In
+        </button>
+        <button
+          id="signup"
+          class="btn"
+          onclick="document.getElementById('loginModal').style.display='block'"
+        >
+          <i class="fa fa-user-plus" aria-hidden="true"></i>
+          Sign Up
+        </button>
+      </div>
     </header>
-
-    <!-- Navbar -->
-    <div id="navbar">
-      <button
-        id="login"
-        class="btn ml-auto"
-        onclick="document.getElementById('loginModal').style.display='block'"
-      >
-        <i class="fa fa-sign-in" aria-hidden="true"></i>
-        Log In
-      </button>
-      <button
-        id="signup"
-        class="btn"
-        onclick="document.getElementById('loginModal').style.display='block'"
-      >
-        <i class="fa fa-user-plus" aria-hidden="true"></i>
-        Sign Up
-      </button>
-      <span class="breadcrumb"> >> Locations >> Great Seattle Area</span>
-    </div>
 
     <!-- Main Content -->
     <div id="main-content">
+      <span class="breadcrumb"> >> Locations >> Great Seattle Area </span>
       <!-- Form & Results -->
       <div id="city-choices" class="container">
-        <h3 id="choose-a-city">Chooose a city in the Great Seattle Area...</h3>
+        <h3 id="title">Chooose a city in the Great Seattle Area...</h3>
 
         <div>
           <form id="cityForm">
@@ -170,6 +169,17 @@
         </div>
       </div>
       <div id="server_response"></div>
+
+      <!-- Bubbles -->
+      <ul class="bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </div>
     <!-- End: Main-Content -->
   </body>

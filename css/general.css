@@ -14,6 +14,7 @@ a.button {
 
 body {
   background-color: #eee;
+  z-index: -1;
 }
 
 button {
@@ -111,8 +112,9 @@ header a:visited {
 }
 
 .breadcrumb {
-  display: flexbox;
-  margin-inline-start: inherit;
+  background-image: inherit;
+  position: relative;
+  justify-content: start;
   justify-content: start;
 }
 
@@ -161,7 +163,7 @@ header a:visited {
   margin: 0;
   padding: 5px;
   background-image: linear-gradient(
-    178deg,
+    135deg,
     #d0ab62,
     #d0ab62,
     #f0cc93,
@@ -170,9 +172,9 @@ header a:visited {
     #f0cc93,
     #f0cc93,
     #f0cc93,
-    #f0cc93,
     #eee,
-    #eee
+    #eee,
+    #d0ab62
   );
   color: black;
   font-size: 1vw;
@@ -180,7 +182,7 @@ header a:visited {
 }
 
 #navbar {
-  background-image: linear-gradient(176deg, #f0cc93, #f0cc93, #eee, #eee, #eee, #eee, #eee);
+  background-image: initial;
   text-align: end;
 }
 
