@@ -39,6 +39,7 @@ span.psw {
   padding-top: 16px;
 }
 
+/* Modal & Background Opacity */
 .modal {
   display: none;
   /* Hidden by default */
@@ -48,13 +49,15 @@ span.psw {
   /* Sit on top */
   left: 0;
   top: 0;
-  width: 100vw;
+  width: 100%;
   /* Full width */
   height: 120%;
   /* Full height */
   overflow: auto;
   /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.5);
   /* Black w/ opacity */
   padding-top: 10vh;
 }
