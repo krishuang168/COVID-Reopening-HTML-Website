@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- build:css css/main.css -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Additional CSS must be placed after Bootstrap CSS. The order matters! -->
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/locations.css" />
+
+    <!-- endbuild -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine|Open+Sans" />
+    <!-- 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans"
+    /> 
+  -->
+
+    <title>COVID-19 Restaurant Reopen Lists</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="jumbotron" class="jumbotron-fluid">
+      <a href="/">
+        <div class="container">
+          <div class="row">
+            <div class="col banner">
+              <h1>COVID-19 Restaurant Reopen Lists</h1>
+              <h2>
+                Check if your local restaurants allow dine-in while maintaining social distancing.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- Navbar -->
+      <div id="navbar">
+        <button
+          id="login"
+          class="btn ml-auto"
+          onclick="document.getElementById('loginModal').style.display='block'"
+        >
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+          Log In
+        </button>
+        <button
+          id="signup"
+          class="btn"
+          onclick="document.getElementById('loginModal').style.display='block'"
+        >
+          <i class="fa fa-user-plus" aria-hidden="true"></i>
+          Sign Up
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div id="main-content">
+      <!-- Breadcrumb -->
+      <span class="breadcrumb">
+        <a href="/">Home</a>&ThickSpace;>>&ThickSpace;<a href="/locations">Locations</a
+        >&ThickSpace;>>&ThickSpace;Seattle Metropolitan Area
+      </span>
+      <!-- Form & Results -->
+      <div id="city-choices" class="container">
+        <h3 id="title">Chooose a city in the Seattle Metropolitan Area...</h3>
+
+        <div>
+          <form id="cityForm">
+            <div class="container">
+              <input
+                type="radio"
+                id="Auburn"
+                name="city"
+                value="Auburn"
+                onclick="chooseCity('Auburn')"
+              />
+              <label for="Auburn">Auburn</label>
+
+              <input
+                type="radio"
+                id="Bellevue"
+                name="city"
+                value="Bellevue"
+                onclick="chooseCity('Bellevue')"
+              />
+              <label for="Bellevue">Bellevue</label>
+
+              <input
+                type="radio"
+                id="Bothell"
+                name="city"
+                value="Bothell"
+                onclick="chooseCity('Bothell')"
+              />
+              <label for="Bothell">Bothell</label>
+
+              <input
+                type="radio"
+                id="Edmonds"
+                name="city"
+                value="Edmonds"
+                onclick="chooseCity('Edmonds')"
+              />
+              <label for="Edmonds">Edmonds</label>
+
+              <input
+                type="radio"
+                id="Everett"
+                name="city"
+                value="Everett"
+                onclick="chooseCity('Everett')"
+              />
+              <label for="Everett">Everett</label>
+
+              <input
+                type="radio"
+                id="Federal Way"
+                name="city"
+                value="FederalWay"
+                onclick="chooseCity('FederalWay')"
+              />
+              <label for="Federal Way">Federal Way</label>
+
+              <input type="radio" id="Kent" name="city" value="Kent" onclick="chooseCity('Kent')" />
+              <label for="Kent">Kent</label>
+
+              <input
+                type="radio"
+                id="Kirkland"
+                name="city"
+                value="Kirkland"
+                onclick="chooseCity('Kirkland')"
+              />
+              <label for="Kirkland">Kirkland</label>
+
+              <input
+                type="radio"
+                id="Lynwood"
+                name="city"
+                value="Lynwood"
+                onclick="chooseCity('Lynwood')"
+              />
+              <label for="Lynwood">Lynwood</label>
+
+              <br />
+
+              <input
+                type="radio"
+                id="Lake Forest Park"
+                name="city"
+                value="Lake Forest Park"
+                onclick="chooseCity('Lake Forest Park')"
+              />
+              <label for="Lake Forest Park">Lake Forest Park</label>
+
+              <input
+                type="radio"
+                id="Mercer Island"
+                name="city"
+                value="MercerIsland"
+                onclick="chooseCity('MercerIsland')"
+              />
+              <label for="Mercer Island">Mercer Island</label>
+
+              <input
+                type="radio"
+                id="Mill Creek"
+                name="city"
+                value="MillCreek"
+                onclick="chooseCity('MillCreek')"
+              />
+              <label for="Mill Creek">Mill Creek</label>
+
+              <input
+                type="radio"
+                id="Monroe"
+                name="city"
+                value="Monroe"
+                onclick="chooseCity('Monroe')"
+              />
+              <label for="Monroe">Monroe</label>
+
+              <input
+                type="radio"
+                id="Mukilteo"
+                name="city"
+                value="Mukilteo"
+                onclick="chooseCity('Mukilteo')"
+              />
+              <label for="Mukilteo">Mukilteo</label>
+
+              <input
+                type="radio"
+                id="Mountlake Terrace"
+                name="city"
+                value="MountlakeTerrace"
+                onclick="chooseCity('MountlakeTerrace')"
+              />
+              <label for="Mountlake Terrace">Mountlake Terrace</label>
+
+              <br />
+
+              <input
+                type="radio"
+                id="Newcastle"
+                name="city"
+                value="Newcastle"
+                onclick="chooseCity('Newcastle')"
+              />
+              <label for="Newcastle">Newcastle</label>
+
+              <input
+                type="radio"
+                id="Redmond"
+                name="city"
+                value="Redmond"
+                onclick="chooseCity('Redmond')"
+              />
+              <label for="Redmond">Redmond</label>
+
+              <input
+                type="radio"
+                id="Renton"
+                name="city"
+                value="Renton"
+                onclick="chooseCity('Renton')"
+              />
+              <label for="Renton">Renton</label>
+
+              <input
+                type="radio"
+                id="SeaTac"
+                name="city"
+                value="SeaTac"
+                onclick="chooseCity('SeaTac')"
+              />
+              <label for="SeaTac">SeaTac</label>
+
+              <input
+                type="radio"
+                id="Seattle"
+                name="city"
+                value="Seattle"
+                onclick="chooseCity('Seattle')"
+              />
+              <label for="Seattle">Seattle</label>
+
+              <input
+                type="radio"
+                id="Shoreline"
+                name="city"
+                value="Shoreline"
+                onclick="chooseCity('Shoreline')"
+              />
+              <label for="Shoreline">Shoreline</label>
+
+              <input
+                type="radio"
+                id="Snohomish"
+                name="city"
+                value="Snohomish"
+                onclick="chooseCity('Snohomish')"
+              />
+              <label for="Snohomish">Snohomish</label>
+
+              <br />
+
+              <input
+                type="radio"
+                id="Tacoma"
+                name="city"
+                value="Tacoma"
+                onclick="chooseCity('Tacoma')"
+              />
+              <label for="Tacoma">Tacoma</label>
+
+              <input
+                type="radio"
+                id="Tukwila"
+                name="city"
+                value="Tukwila"
+                onclick="chooseCity('Tukwila')"
+              />
+              <label for="Tukwila">Tukwila</label>
+
+              <input
+                type="radio"
+                id="Woodinville"
+                name="city"
+                value="Woodinville"
+                onclick="chooseCity('Woodinville')"
+              />
+              <label for="Woodinville">Woodinville</label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="server_response"></div>
+
+      <!-- Go to Top -->
+      <a id="Top" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+
+      <!-- Bubbles -->
+      <ul class="bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!-- End: Main-Content -->
+  </body>
+  <script src="../js/config.js"></script>
+  <script src="../js/serverCommunication.js"></script>
+  <script src="../js/renderContent.js"></script>
+</html>

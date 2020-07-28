@@ -64,238 +64,72 @@
 
     <!-- Main Content -->
     <div id="main-content">
-      <span class="breadcrumb"> >> Locations >> Seattle Metropolitan Area </span>
+      <!-- Breadcrumb -->
+      <span class="breadcrumb"><a href="/">Home</a>&ThickSpace;>>&ThickSpace;Locations</span>
       <!-- Form & Results -->
       <div id="city-choices" class="container">
-        <h3 id="title">Chooose a city in the Seattle Metropolitan Area...</h3>
+        <h3 id="title">Chooose a metropolitan area...</h3>
 
         <div>
           <form id="cityForm">
             <div class="container">
               <input
                 type="radio"
-                id="Auburn"
+                id="SeattleArea"
                 name="city"
-                value="Auburn"
-                onclick="chooseCity('Auburn')"
+                value="SeattleArea"
+                onclick="chooseMetro('SeattleArea')"
               />
-              <label for="Auburn">Auburn</label>
+              <label for="SeattleArea">Seattle Metropolitan Area</label>
 
-              <input
-                type="radio"
-                id="Bellevue"
-                name="city"
-                value="Bellevue"
-                onclick="chooseCity('Bellevue')"
-              />
-              <label for="Bellevue">Bellevue</label>
+              <hr />
 
-              <input
-                type="radio"
-                id="Bothell"
-                name="city"
-                value="Bothell"
-                onclick="chooseCity('Bothell')"
-              />
-              <label for="Bothell">Bothell</label>
+              <div style="color: #999;">
+                <p>Coming Soon</p>
+                <input
+                  type="radio"
+                  id="Boston"
+                  name="city"
+                  value="Boston"
+                  onclick="chooseMetro('Boston')"
+                />
+                <label for="Boston">Boston</label>
 
-              <input
-                type="radio"
-                id="Edmonds"
-                name="city"
-                value="Edmonds"
-                onclick="chooseCity('Edmonds')"
-              />
-              <label for="Edmonds">Edmonds</label>
+                <input
+                  type="radio"
+                  id="Chicago"
+                  name="city"
+                  value="Chicago"
+                  onclick="chooseMetro('Chicago')"
+                />
+                <label for="Chicago">Chicago</label>
 
-              <input
-                type="radio"
-                id="Everett"
-                name="city"
-                value="Everett"
-                onclick="chooseCity('Everett')"
-              />
-              <label for="Everett">Everett</label>
+                <input type="radio" id="DFW" name="city" value="DFW" onclick="chooseMetro('DFW')" />
+                <label for="DFW">Dallas-Fort Worth</label>
 
-              <input
-                type="radio"
-                id="Federal Way"
-                name="city"
-                value="FederalWay"
-                onclick="chooseCity('FederalWay')"
-              />
-              <label for="Federal Way">Federal Way</label>
+                <input type="radio" id="DC" name="city" value="DC" onclick="chooseMetro('DC')" />
+                <label for="DC">Washington DC-Arlington</label>
 
-              <input type="radio" id="Kent" name="city" value="Kent" onclick="chooseCity('Kent')" />
-              <label for="Kent">Kent</label>
+                <input
+                  type="radio"
+                  id="Houston"
+                  name="city"
+                  value="Houston"
+                  onclick="chooseMetro('Houston')"
+                />
+                <label for="Houston">Houston</label>
 
-              <input
-                type="radio"
-                id="Kirkland"
-                name="city"
-                value="Kirkland"
-                onclick="chooseCity('Kirkland')"
-              />
-              <label for="Kirkland">Kirkland</label>
+                <br />
 
-              <input
-                type="radio"
-                id="Lynwood"
-                name="city"
-                value="Lynwood"
-                onclick="chooseCity('Lynwood')"
-              />
-              <label for="Lynwood">Lynwood</label>
+                <input type="radio" id="LA" name="city" value="LA" onclick="chooseMetro('LA')" />
+                <label for="LA">Los Angeles Metropolitan Area</label>
 
-              <br />
+                <input type="radio" id="NYC" name="city" value="NYC" onclick="chooseMetro('NYC')" />
+                <label for="NYC">New York City</label>
 
-              <input
-                type="radio"
-                id="Lake Forest Park"
-                name="city"
-                value="Lake Forest Park"
-                onclick="chooseCity('Lake Forest Park')"
-              />
-              <label for="Lake Forest Park">Lake Forest Park</label>
-
-              <input
-                type="radio"
-                id="Mercer Island"
-                name="city"
-                value="MercerIsland"
-                onclick="chooseCity('MercerIsland')"
-              />
-              <label for="Mercer Island">Mercer Island</label>
-
-              <input
-                type="radio"
-                id="Mill Creek"
-                name="city"
-                value="MillCreek"
-                onclick="chooseCity('MillCreek')"
-              />
-              <label for="Mill Creek">Mill Creek</label>
-
-              <input
-                type="radio"
-                id="Monroe"
-                name="city"
-                value="Monroe"
-                onclick="chooseCity('Monroe')"
-              />
-              <label for="Monroe">Monroe</label>
-
-              <input
-                type="radio"
-                id="Mukilteo"
-                name="city"
-                value="Mukilteo"
-                onclick="chooseCity('Mukilteo')"
-              />
-              <label for="Mukilteo">Mukilteo</label>
-
-              <input
-                type="radio"
-                id="Mountlake Terrace"
-                name="city"
-                value="MountlakeTerrace"
-                onclick="chooseCity('MountlakeTerrace')"
-              />
-              <label for="Mountlake Terrace">Mountlake Terrace</label>
-
-              <br />
-
-              <input
-                type="radio"
-                id="Newcastle"
-                name="city"
-                value="Newcastle"
-                onclick="chooseCity('Newcastle')"
-              />
-              <label for="Newcastle">Newcastle</label>
-
-              <input
-                type="radio"
-                id="Redmond"
-                name="city"
-                value="Redmond"
-                onclick="chooseCity('Redmond')"
-              />
-              <label for="Redmond">Redmond</label>
-
-              <input
-                type="radio"
-                id="Renton"
-                name="city"
-                value="Renton"
-                onclick="chooseCity('Renton')"
-              />
-              <label for="Renton">Renton</label>
-
-              <input
-                type="radio"
-                id="SeaTac"
-                name="city"
-                value="SeaTac"
-                onclick="chooseCity('SeaTac')"
-              />
-              <label for="SeaTac">SeaTac</label>
-
-              <input
-                type="radio"
-                id="Seattle"
-                name="city"
-                value="Seattle"
-                onclick="chooseCity('Seattle')"
-              />
-              <label for="Seattle">Seattle</label>
-
-              <input
-                type="radio"
-                id="Shoreline"
-                name="city"
-                value="Shoreline"
-                onclick="chooseCity('Shoreline')"
-              />
-              <label for="Shoreline">Shoreline</label>
-
-              <input
-                type="radio"
-                id="Snohomish"
-                name="city"
-                value="Snohomish"
-                onclick="chooseCity('Snohomish')"
-              />
-              <label for="Snohomish">Snohomish</label>
-
-              <br />
-
-              <input
-                type="radio"
-                id="Tacoma"
-                name="city"
-                value="Tacoma"
-                onclick="chooseCity('Tacoma')"
-              />
-              <label for="Tacoma">Tacoma</label>
-
-              <input
-                type="radio"
-                id="Tukwila"
-                name="city"
-                value="Tukwila"
-                onclick="chooseCity('Tukwila')"
-              />
-              <label for="Tukwila">Tukwila</label>
-
-              <input
-                type="radio"
-                id="Woodinville"
-                name="city"
-                value="Woodinville"
-                onclick="chooseCity('Woodinville')"
-              />
-              <label for="Woodinville">Woodinville</label>
+                <input type="radio" id="SF" name="city" value="SF" onclick="chooseMetro('SF')" />
+                <label for="SF">San Francisco Bay Area</label>
+              </div>
             </div>
           </form>
         </div>
@@ -319,6 +153,12 @@
     <!-- End: Main-Content -->
   </body>
   <script src="js/config.js"></script>
-  <script src="js/serverCommunication.js"></script>
-  <script src="js/renderContent.js"></script>
+  <script>
+    function chooseMetro(metro) {
+      const workingList = ["SeattleArea"];
+
+      if (workingList.filter((item) => item === metro).length)
+        window.location.href = `locations/${metro}`;
+    }
+  </script>
 </html>

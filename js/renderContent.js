@@ -1,8 +1,10 @@
 async function chooseCity(city) {
-  dataSent = JSON.stringify(`${city}, WA`);
-  console.log("dataSent", dataSent);
+  console.log("City: ", `${city}, WA`);
 
-  const dataReceived = await getData(baseUrl, dataSent);
+  const location = `${city}WA`;
+  const url = `${baseUrl}/locations/SeattleArea/${location}`;
+
+  const dataReceived = await getData(url);
   console.log("dataReceived", dataReceived);
 
   renderData(dataReceived);
@@ -20,7 +22,6 @@ function renderData(data) {
     // Correct Restaurant Data
     const contentObj = JSON.parse(data);
 
-    console.log("Content object: ", contentObj);
     const restaurantList = contentObj.restaurants.map((item) => {
       let str = `<li style="list-style: none"><div>`;
       str += `<span style="font-weight: bold; font-size: 20px">${item.name} </span>`;
@@ -41,10 +42,8 @@ function renderData(data) {
 
       return str;
     });
-    console.log(restaurantList);
 
     const renderedList = restaurantList.reduce((item, init) => (init += item), "");
-    console.log(renderedList);
 
     const x = document.getElementById("server_response");
     x.innerHTML = `<div style="margin-left: 200px; background-image: inherite">
