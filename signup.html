@@ -7,12 +7,14 @@
 
     <!-- build:css css/main.css -->
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <!-- Additional CSS must be placed after Bootstrap CSS. The order matters! -->
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="/css/general.css" />
     <link rel="stylesheet" href="/css/modal.css" />
+    <link rel="stylesheet" href="/css/bubbles.css" />
+    <link rel="stylesheet" href="/css/locations.css" />
 
     <!-- endbuild -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine|Open+Sans" />
@@ -35,57 +37,55 @@
         </div>
       </a>
       <!-- Navbar -->
-      <div id="navbar">
-        <button
-          id="login"
-          class="btn ml-auto"
-          onclick="document.getElementById('loginModal').style.display='block'"
-        >
-          <i class="fa fa-sign-in" aria-hidden="true"></i>
-          Log In
-        </button>
-        <button id="signup" class="btn" onclick="window.location='/users/signup'">
-          <i class="fa fa-user-plus" aria-hidden="true"></i>
-          Sign Up
-        </button>
-      </div>
+      <div id="navbar"></div>
     </header>
 
-    <!-- Share Social Icons -->
-    <div id="shareSocial" class="sticky-top"></div>
-
     <!-- Main Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-10 col-md-6">
-          <img
-            class="crop fit"
-            height="400px"
-            style="object-fit: none;"
-            src="https://phil.cdc.gov//PHIL_Images/2871/2871_lores.jpg"
-          />
-          <br />
-        </div>
-        <div class="col-xs-10 col-md-6">
-          <img
-            class="crop fit"
-            height="400px"
-            src="https://cdn.pixabay.com/photo/2014/09/17/20/26/restaurant-449952_1280.jpg"
-          />
-        </div>
-      </div>
-      <span>
-        <a class="photo-credit" href="photo_credits">Photo Credits</a>
-      </span>
+    <div id="main-content">
+      <!-- Breadcrumb -->
+      <span class="breadcrumb"><a href="/">Home</a>&ThickSpace;>>&ThickSpace;Signup</span>
+      <!-- Form & Results -->
+      <div id="city-choices" class="container">
+        <h3 id="title">Please fill out the following fields:</h3>
 
-      <div class="container">
-        <br />
-        <a class="button btn-lg btn-violet" href="locations"
-          >&ThickSpace;&ThickSpace;Start&ThickSpace;&ThickSpace;</a
-        >
-        &ThickSpace; &ThickSpace; &ThickSpace;
-        <!-- <a class="button btn-lg btn-lavender" href="categories">By Category</a> -->
+        <div>
+          <form id="cityForm">
+            <div class="container">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" placeholder="username" required />
+
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="password"
+                required
+              />
+
+              <label for="email">E-mail</label>
+              <input type="text" id="email" name="email" placeholder="email" required />
+
+              <button class="btn-lg btn-violet">Submit</button>
+            </div>
+          </form>
+        </div>
       </div>
+      <div id="server_response"></div>
+
+      <!-- Go to Top -->
+      <a id="Top" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+
+      <!-- Bubbles -->
+      <ul class="bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </div>
     <!-- End: Main-Content -->
 
@@ -130,13 +130,14 @@
       </form>
     </div>
   </body>
+  <script src="js/config.js"></script>
 
-  <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <!-- Our own codes -->
-  <script type="text/javascript" src="js/modal.js"></script>
-  <!-- endbuild -->
+  <script>
+    function chooseMetro(metro) {
+      const workingList = ["SeattleArea"];
+
+      if (workingList.filter((item) => item === metro).length)
+        window.location.href = `locations/${metro}`;
+    }
+  </script>
 </html>
