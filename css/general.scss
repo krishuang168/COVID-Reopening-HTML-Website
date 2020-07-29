@@ -15,6 +15,7 @@ $color-dark-transparent: rgba(34, 34, 34, 0.5);
 a:hover,
 a:link,
 a:visited {
+  color: initial;
   text-decoration: none;
 }
 
@@ -219,6 +220,10 @@ header {
 #navbar {
   background-image: initial;
   text-align: end;
+}
+
+#home-start-button {
+  color: $color-bright;
 }
 
 // == Viewport Size SM ==
