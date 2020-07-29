@@ -45,28 +45,45 @@
       <!-- Breadcrumb -->
       <span class="breadcrumb"><a href="/">Home</a>&ThickSpace;>>&ThickSpace;Signup</span>
       <!-- Form & Results -->
-      <div id="city-choices" class="container">
-        <h3 id="title">Please fill out the following fields:</h3>
+      <div class="container form-white-bg">
+        <h3 class="title">Please fill out the following fields:</h3>
 
         <div>
-          <form id="cityForm">
+          <form id="signupForm" method="POST">
             <div class="container">
               <label for="username">Username</label>
-              <input type="text" id="username" name="username" placeholder="username" required />
+              <input type="text" id="username" name="username" placeholder="Username/ID" required />
 
               <label for="password">Password</label>
               <input
                 type="password"
                 id="password"
                 name="password"
-                placeholder="password"
+                placeholder="Password"
                 required
               />
 
               <label for="email">E-mail</label>
-              <input type="text" id="email" name="email" placeholder="email" required />
+              <input type="text" id="email" name="email" placeholder="E-mail" required />
 
-              <button class="btn-lg btn-violet">Submit</button>
+              <label for="firstname">First Name</label>
+              <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                placeholder="First Name"
+                required
+              />
+              <label for="lastname">Last Name</label>
+              <input type="text" id="lastname" name="lastname" placeholder="Last Name" required />
+
+              <input
+                type="submit"
+                class="btn-lg btn-violet"
+                value="Submit"
+                style="margin-top: 10px;"
+                onclick="submitSignup()"
+              />
             </div>
           </form>
         </div>
@@ -131,13 +148,6 @@
     </div>
   </body>
   <script src="js/config.js"></script>
-
-  <script>
-    function chooseMetro(metro) {
-      const workingList = ["SeattleArea"];
-
-      if (workingList.filter((item) => item === metro).length)
-        window.location.href = `locations/${metro}`;
-    }
-  </script>
+  <script src="js/serverCommunication.js"></script>
+  <script src="js/userAccount.js"></script>
 </html>
