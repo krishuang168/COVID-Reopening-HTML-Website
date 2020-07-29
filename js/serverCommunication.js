@@ -12,6 +12,7 @@ async function getData(url) {
 
 async function postData(url, dataSent) {
   console.log("URL: ", url);
+  console.log("Data sent: ", dataSent);
 
   // const response =
   fetch(url, {
