@@ -92,6 +92,20 @@ header a:visited {
   color: #000;
 }
 
+.form-white-bg {
+  background-color: white;
+  min-width: 300px;
+  min-height: 200px;
+  padding: 30px 20px 20px 20px;
+  border-radius: 15px;
+}
+.form-white-bg label {
+  font-size: 1.2vw;
+}
+.form-white-bg .title {
+  padding-left: 20px;
+}
+
 .row-card {
   display: none;
 }

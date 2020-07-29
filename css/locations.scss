@@ -39,20 +39,7 @@ body {
 #main-content {
   min-height: 70vh;
 
-  #city-choices {
-    background-color: white;
-    min-width: 300px;
-    min-height: 200px;
-    padding: 30px 20px 20px 20px;
-    border-radius: 15px;
-    label {
-      font-size: 1.2vw;
-    }
-
-    #title {
-      padding-left: 20px;
-    }
-  }
+  
 
   #server_response {
     min-width: inherit;

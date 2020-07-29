@@ -29,19 +29,6 @@ body {
 #main-content {
   min-height: 70vh;
 }
-#main-content #city-choices {
-  background-color: white;
-  min-width: 300px;
-  min-height: 200px;
-  padding: 30px 20px 20px 20px;
-  border-radius: 15px;
-}
-#main-content #city-choices label {
-  font-size: 1.2vw;
-}
-#main-content #city-choices #title {
-  padding-left: 20px;
-}
 #main-content #server_response {
   min-width: inherit;
   margin-left: 200px;
