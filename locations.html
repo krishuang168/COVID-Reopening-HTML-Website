@@ -23,35 +23,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header id="jumbotron" class="jumbotron-fluid">
-      <a href="/">
-        <div class="container">
-          <div class="row">
-            <div class="col banner">
-              <h1>COVID-19 Restaurant Reopening Lists</h1>
-              <h2>
-                Check if your local restaurants allow dine-in while maintaining social distancing.
-              </h2>
-            </div>
-          </div>
-        </div>
-      </a>
-      <!-- Navbar -->
-      <div id="navbar">
-        <button
-          id="login"
-          class="btn ml-auto"
-          onclick="document.getElementById('loginModal').style.display='block'"
-        >
-          <i class="fa fa-sign-in" aria-hidden="true"></i>
-          Log In
-        </button>
-        <button id="signup" class="btn" onclick="window.location='/users/signup'">
-          <i class="fa fa-user-plus" aria-hidden="true"></i>
-          Sign Up
-        </button>
-      </div>
-    </header>
+    <div id="header"></div>
 
     <!-- Main Content -->
     <div id="main-content">
@@ -131,60 +103,26 @@
       <a id="Top" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
 
       <!-- Bubbles -->
-      <ul class="bubbles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+      <div id="bubbles"></div>
     </div>
     <!-- End: Main-Content -->
 
     <!-- Login Modal -->
-    <div id="loginModal" class="modal">
-      <form class="modal-content animate" method="POST">
-        <div class="imgcontainer">
-          <span
-            onclick="document.getElementById('loginModal').style.display='none'"
-            class="close"
-            title="Close Modal"
-            >&times;</span
-          >
-        </div>
-
-        <div class="container">
-          <label for="username"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="username" required />
-
-          <label for="password"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="password" required />
-
-          <label> <input type="checkbox" checked="checked" name="remember" /> Remember me </label>
-        </div>
-
-        <div class="container" style="background-color: #f1f1f1;">
-          <span class="left">
-            <button
-              type="button"
-              onclick="document.getElementById('loginModal').style.display='none'"
-              class="cancelbtn"
-            >
-              Cancel
-            </button>
-          </span>
-          <span class="right">
-            <button type="submit" formmethod="post" onclick="alert(value)">
-              Login
-            </button>
-          </span>
-        </div>
-      </form>
-    </div>
+    <div id="loginModal" class="modal"></div>
   </body>
+
+  <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <!-- Our own codes -->
   <script src="js/config.js"></script>
+  <script>
+    $("#header").load("/html/header.html");
+    $("#loginModal").load("/html/modal.html");
+    $("#bubbles").load("/html/bubbles.html");
+  </script>
   <script>
     function chooseMetro(metro) {
       const workingList = ["SeattleArea"];

@@ -2,106 +2,128 @@
 a:hover,
 a:link,
 a:visited {
-  color: initial;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a.button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 body {
   background-color: #eee;
-  z-index: -1; }
+  z-index: -1;
+}
 
 button {
   background-color: #b08ffc;
   border: none;
   font-size: 18px;
   font-weight: bolder;
-  text-shadow: #7d45fc; }
+  text-shadow: #7d45fc;
+}
 
 button:hover {
-  opacity: 0.8; }
+  opacity: 0.8;
+}
 
 h1 {
   color: #995500;
   text-shadow: 2px 2px #d0ab62;
   font-size: 3.2em;
-  font-family: "Tangerine", sans-serif; }
+  font-family: "Tangerine", sans-serif;
+}
 
 h2 {
   color: rgba(34, 34, 34, 0.5);
   font-size: 1.2vw;
-  word-spacing: 0.1em; }
+  word-spacing: 0.1em;
+}
 
 h3 {
   color: black;
-  font-family: "Aria", sans-serif; }
+  font-family: "Aria", sans-serif;
+}
 
 h4,
 h5,
 h6 {
   color: black;
-  font-family: "Arial", cursive; }
+  font-family: "Arial", cursive;
+}
 
 header a:hover,
 header a:link,
 header a:visited {
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+}
 
 .bg-white {
-  background-color: white; }
+  background-color: white;
+}
 
 .btn-go {
   color: black;
   font-family: Arial Black;
-  margin: 15px 0 0 0; }
+  margin: 15px 0 0 0;
+}
 
 .btn-lavender {
   color: rgba(34, 34, 34, 0.5);
-  background-color: #b08ffc; }
+  background-color: #b08ffc;
+}
 
 .btn-violet {
   color: #eee;
-  background-color: #7d45fc; }
+  background-color: #7d45fc;
+}
 
 .crop {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .card-title {
   font-family: Arial;
   font-weight: bold;
   font-size: 110%;
-  color: #000; }
+  color: #000;
+}
 
 .form-white-bg {
   background-color: white;
   min-width: 300px;
   min-height: 200px;
   padding: 30px 20px 20px 20px;
-  border-radius: 15px; }
-  .form-white-bg label {
-    font-size: 1.2vw; }
-  .form-white-bg .title {
-    padding-left: 20px; }
+  border-radius: 15px;
+}
+.form-white-bg label {
+  font-size: 1.2vw;
+}
+.form-white-bg .title {
+  padding-left: 20px;
+}
 
 .row-card {
-  display: none; }
+  display: none;
+}
 
 .fit {
   width: 50vw;
   max-width: 99%;
-  max-height: 99%; }
+  max-height: 99%;
+}
 
 .font-arial {
-  font-family: "Gotu", Helvetica, sans-serif; }
+  font-family: "Gotu", Helvetica, sans-serif;
+}
 
 .banner {
   padding: 10px 0;
-  min-height: 10px; }
+  min-height: 10px;
+}
 
 .breadcrumb {
   color: #000;
@@ -110,69 +132,109 @@ header a:visited {
   display: inline-flexbox;
   position: relative;
   justify-content: start;
-  justify-content: start; }
+  justify-content: start;
+}
+
+.jumbotron {
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  background-image: linear-gradient(
+    105deg,
+    #d0ab62,
+    #f0cc93,
+    #eee,
+    #eee,
+    #f0cc93,
+    #f0cc93,
+    #f0cc93,
+    #f0cc93,
+    #eee,
+    #eee
+  );
+  color: black;
+  font-size: 1vw;
+  font-family: "Bitter", sans-serif;
+}
+
+.jumbotron2 {
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  background-color: rgba(238, 238, 238, 0.7);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: black;
+  font-size: 1vw;
+  font-family: "Bitter", sans-serif;
+}
 
 .photo-credit {
   color: #888;
   font-size: 7px;
   font-style: italic;
-  text-align: center; }
-  .photo-credit a:link {
-    text-decoration: none;
-    color: inherit; }
+  text-align: center;
+}
 
 .row-content {
   padding: 50px 0;
-  min-height: 80px; }
+  min-height: 80px;
+}
 
 .text-black {
-  color: black; }
+  color: black;
+}
 
 .text-orange {
-  color: #b08ffc; }
+  color: #b08ffc;
+}
 
 .text-secondary {
-  color: #7d45fc; }
+  color: #7d45fc;
+}
 
 .text-sm {
-  font-size: 20px; }
+  font-size: 20px;
+}
 
 .text-cursive {
-  font-family: "Lobster", sans-serif; }
-
-#jumbotron {
-  width: 100%;
-  margin: 0;
-  padding: 5px;
-  background-image: linear-gradient(105deg, #d0ab62, #f0cc93, #eee, #eee, #f0cc93, #f0cc93, #f0cc93, #f0cc93, #eee, #eee);
-  color: black;
-  font-size: 1vw;
-  font-family: "Bitter", sans-serif; }
+  font-family: "Lobster", sans-serif;
+}
 
 #login {
-  justify-content: right; }
+  justify-content: right;
+}
 
 #navbar {
   background-image: initial;
-  text-align: end; }
+  text-align: end;
+}
 
 #home-start-button {
-  color: #eee; }
+  color: #eee;
+}
 
 @media only screen and (max-width: 768px) {
   img {
-    resize: 50%; }
+    resize: 50%;
+  }
   .fit {
     width: 50vw;
     max-width: 99%;
-    max-height: 99%; }
+    max-height: 99%;
+  }
   .text-sm {
-    font-size: 20px; } }
+    font-size: 20px;
+  }
+}
 
 @media only screen and (max-width: 575px) {
   .fit {
     width: 90vw;
     max-width: 99%;
-    max-height: 99%; }
+    max-height: 99%;
+  }
   .text-sm {
-    font-size: 12px; } }
+    font-size: 12px;
+  }
+}

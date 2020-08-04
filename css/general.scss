@@ -15,7 +15,6 @@ $color-dark-transparent: rgba(34, 34, 34, 0.5);
 a:hover,
 a:link,
 a:visited {
-  color: initial;
   text-decoration: none;
 }
 
@@ -154,14 +153,44 @@ header {
   justify-content: start;
 }
 
+.jumbotron {
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  background-image: linear-gradient(
+    105deg,
+    $color-gold,
+    $color-champagne,
+    $color-bright,
+    $color-bright,
+    $color-champagne,
+    $color-champagne,
+    $color-champagne,
+    $color-champagne,
+    $color-bright,
+    $color-bright
+  );
+  color: black;
+  font-size: 1vw;
+  font-family: "Bitter", sans-serif;
+}
+
+.jumbotron2 {
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  background-color: rgba(238, 238, 238, 0.7);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: black;
+  font-size: 1vw;
+  font-family: "Bitter", sans-serif;
+}
+
 .photo-credit {
   color: #888;
   font-size: 7px;
   font-style: italic;
-  a:link {
-    text-decoration: none;
-    color: inherit;
-  }
   text-align: center;
 }
 
@@ -191,27 +220,6 @@ header {
 }
 
 // == By ID ==
-#jumbotron {
-  width: 100%;
-  margin: 0;
-  padding: 5px;
-  background-image: linear-gradient(
-    105deg,
-    $color-gold,
-    $color-champagne,
-    $color-bright,
-    $color-bright,
-    $color-champagne,
-    $color-champagne,
-    $color-champagne,
-    $color-champagne,
-    $color-bright,
-    $color-bright
-  );
-  color: black;
-  font-size: 1vw;
-  font-family: "Bitter", sans-serif;
-}
 
 #login {
   justify-content: right;
