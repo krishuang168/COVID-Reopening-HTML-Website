@@ -32,7 +32,7 @@ button:hover {
 h1 {
   color: #995500;
   text-shadow: 2px 2px #d0ab62;
-  font-size: 3.2em;
+  font-size: 3.2rem;
   font-family: "Tangerine", sans-serif;
 }
 
@@ -201,6 +201,12 @@ header a:visited {
   font-family: "Lobster", sans-serif;
 }
 
+.footer {
+  margin-top: 5rem;
+  margin-left: 43vw;
+  min-height: 30px;
+}
+
 #login {
   justify-content: right;
 }
@@ -214,7 +220,21 @@ header a:visited {
   color: #eee;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1199px) {
+  .footer {
+    margin-top: 5rem;
+    margin-left: 35vw;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .footer {
+    margin-top: 5rem;
+    margin-left: 32vw;
+  }
+}
+
+@media only screen and (max-width: 767px) {
   img {
     resize: 50%;
   }
@@ -223,18 +243,34 @@ header a:visited {
     max-width: 99%;
     max-height: 99%;
   }
+  .footer {
+    margin-top: 5rem;
+    margin-left: 30vw;
+  }
   .text-sm {
     font-size: 20px;
   }
 }
 
 @media only screen and (max-width: 575px) {
+  h1 {
+    font-size: 2rem;
+  }
   .fit {
     width: 90vw;
     max-width: 99%;
     max-height: 99%;
   }
+  .footer {
+    display: flexbox;
+    justify-self: center;
+    margin-top: 3rem;
+    margin-left: 28vw;
+  }
   .text-sm {
     font-size: 12px;
+  }
+  #home-start-button {
+    margin-left: 22vw;
   }
 }

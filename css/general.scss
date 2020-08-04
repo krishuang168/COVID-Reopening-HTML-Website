@@ -46,7 +46,7 @@ button:hover {
 h1 {
   color: $color-brown;
   text-shadow: 2px 2px $color-gold;
-  font-size: 3.2em;
+  font-size: 3.2rem;
   font-family: "Tangerine", sans-serif;
 }
 
@@ -219,6 +219,14 @@ header {
   font-family: "Lobster", sans-serif;
 }
 
+.footer {
+  // Web browser size
+  // For mobile device, check below
+  margin-top: 5rem;
+  margin-left: 43vw;
+  min-height: 30px;
+}
+
 // == By ID ==
 
 #login {
@@ -234,8 +242,24 @@ header {
   color: $color-bright;
 }
 
+// == Viewport Size LG ==
+@media only screen and (max-width: 1199px) {
+  .footer {
+    margin-top: 5rem;
+    margin-left: 35vw;
+  }
+}
+
+// == Viewport Size MD ==
+@media only screen and (max-width: 991px) {
+  .footer {
+    margin-top: 5rem;
+    margin-left: 32vw;
+  }
+}
+
 // == Viewport Size SM ==
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   // == By Tag ==
   img {
     resize: 50%;
@@ -248,6 +272,11 @@ header {
     max-height: 99%;
   }
 
+  .footer {
+    margin-top: 5rem;
+    margin-left: 30vw;
+  }
+
   .text-sm {
     font-size: 20px;
   }
@@ -256,6 +285,9 @@ header {
 // == Viewport Size XS ==
 @media only screen and (max-width: 575px) {
   // == By Tag ==
+  h1 {
+    font-size: 2rem;
+  }
 
   // == By Class ==
   .fit {
@@ -263,7 +295,19 @@ header {
     max-width: 99%;
     max-height: 99%;
   }
+
+  .footer {
+    display: flexbox;
+    justify-self: center;
+    margin-top: 3rem;
+    margin-left: 28vw;
+  }
+
   .text-sm {
     font-size: 12px;
+  }
+
+  #home-start-button {
+    margin-left: 22vw;
   }
 }
